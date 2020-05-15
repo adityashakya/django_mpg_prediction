@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title> MPG Predictor</title>
+</head>
+<body>
+
+<h2>
+    Check milage of your car instantly
+</h2>
+
+    {{ a }}
+
+<h3>Enter your car details</h3>
+
+    <form method="post" enctype="multipart/form-data" action="mpg_predict">
+        {% csrf_token %}
+        <div class="col-md-4 col-sm-4"><label for="fname">Cylinders:</label> </div> <input name="cylinderVal" type="text" value=8><br><br>
+        <div class="col-md-4 col-sm-4"><label for="lname">Displacement:</label> </div> <input type="text" id="lname" name="dispVal" value=307><br><br>
+        <div class="col-md-4 col-sm-4"><label for="fname">horsepower:</label> </div> <input type="text" id="fname" name="hrsPwrVal" value=130><br><br>
+        <div class="col-md-4 col-sm-4"><label for="lname">weight:</label> </div> <input type="text" id="lname" name="weightVal" value=3504><br><br>
+        <div class="col-md-4 col-sm-4"><label for="fname">acceleration:</label></div>  <input type="text" id="fname" name="accVal" value=12><br><br>
+        <div class="col-md-4 col-sm-4"><label for="lname">model:</label> </div> <input type="text" id="lname" name="modelVal" value=70><br><br>
+        <div class="col-md-4 col-sm-4"><label for="lname">origin:</label> </div> <input type="text" id="lname" name="originVal" value=1><br><br>
+
+
+        <input type="submit" value="Submit"></div>
+
+    </form>
+
+
+
+
+
+</body>
+
+</html>

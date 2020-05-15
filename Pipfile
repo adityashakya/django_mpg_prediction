@@ -7,6 +7,12 @@ verify_ssl = true
 
 [packages]
 django = "*"
+pandas = "*"
+sklearn = "*"
+joblib = "*"
+sklearn-pandas = "*"
+keras = "*"
+tensorflow = "*"
 
 [requires]
 python_version = "3.8"

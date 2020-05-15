@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    image: blog_app
+    image: model_mpg
     ports:
       - "8000:8000"
     command:
