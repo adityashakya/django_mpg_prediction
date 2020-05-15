@@ -20,16 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="701327f4-275b-49a1-a1de-998b695886c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/templates/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/django_mpg_prediction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_mpg_prediction.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_mpg_prediction/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_mpg_prediction/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_mpg_prediction/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_mpg_prediction/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dummy model for MPG.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/dummy model for MPG.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/.ipynb_checkpoints/MPG_ANN_Notebook-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/.ipynb_checkpoints/MPG_ANN_Notebook-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/MPG_ANN_Notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/MPG_ANN_Notebook.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
