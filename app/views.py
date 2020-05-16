@@ -8,21 +8,32 @@ import keras
 import numpy as np
 
 
+# Load the model, the data pipeline and the target scaler
+loaded_model = keras.models.load_model('./ml_model/MPG_keras_NN')
+loaded_pipeline = joblib.load('./ml_model/data_pipeline.pkl')
+loaded_target_scaler = joblib.load('./ml_model/target_scaler.pkl')
+
+# default form values
+model_input_values = {'acceleration': 12,
+                      'cylinders': 4,
+                      'displacement': 100,
+                      'horsepower': 90,
+                      'model_year': 70,
+                      'origin': 2,
+                      'weight': 4321}
+
 # Create your views here.
 
 
 def index(request):
-    context = {'a': 'Hello World'}
+    context = {'form_values': model_input_values}
     return render(request, 'app/index.html', context=context)
 
 
 # Main Predict function
 
 
-# Load the model, the data pipeline and the target scaler
-loaded_model = keras.models.load_model('./ml_model/MPG_keras_NN')
-loaded_pipeline = joblib.load('./ml_model/data_pipeline.pkl')
-loaded_target_scaler = joblib.load('./ml_model/target_scaler.pkl')
+
 
 
 def get_input_set(input_dict, load_pipeline):
@@ -42,7 +53,7 @@ def mpg_predict(request):
 
     if request.method == 'POST':
         # print(request.POST.dict())
-        model_input_values = {'acceleration': request.POST.get('accVal'),
+        input_values = {'acceleration': request.POST.get('accVal'),
                               'cylinders': request.POST.get('cylinderVal'),
                               'displacement': request.POST.get('dispVal'),
                               'horsepower': request.POST.get('hrsPwrVal'),
@@ -50,9 +61,10 @@ def mpg_predict(request):
                               'origin': request.POST.get('originVal'),
                               'weight': request.POST.get('weightVal')}
 
-        model_input = get_input_set(model_input_values,loaded_pipeline)
+        model_input = get_input_set(input_values, loaded_pipeline)
         prediction = get_prediction(loaded_model, loaded_target_scaler, model_input)
         # print(prediction)
-        context = {'prediction': prediction}
+        input_values['model_year'] = input_values['model year']
+        context = {'prediction': prediction, 'form_values': input_values}
 
     return render(request, 'app/index.html', context=context)
