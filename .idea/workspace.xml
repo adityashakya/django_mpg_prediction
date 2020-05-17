@@ -20,11 +20,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="701327f4-275b-49a1-a1de-998b695886c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/django_mpg_prediction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_mpg_prediction.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_mpg_prediction/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_mpg_prediction/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_mpg_prediction/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_mpg_prediction/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_mpg_prediction/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_mpg_prediction/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_mpg_prediction/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_mpg_prediction/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_mpg_prediction/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_mpg_prediction/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/.ipynb_checkpoints/MPG_ANN_Notebook-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/.ipynb_checkpoints/MPG_ANN_Notebook-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/.ipynb_checkpoints/dummy model for MPG-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/.ipynb_checkpoints/dummy model for MPG-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ml_model/MPG_ANN_Notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/MPG_ANN_Notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/MPG_keras_NN" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/MPG_keras_NN" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/RFModelforMPG.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/RFModelforMPG.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/RF_ModelforMPG.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/RF_ModelforMPG.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/data_pipeline.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/data_pipeline.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/dummy model for MPG.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/dummy model for MPG.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/mongodb connection.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/mongodb connection.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/mpg_data_example.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/mpg_data_example.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml_model/target_scaler.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/ml_model/target_scaler.pkl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +97,9 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="Dockerfile" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="Pipfile" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="docker-compose.yml" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -78,5 +112,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="397" y="199" width="609" height="410" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589622390350">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="397" y="199" width="609" height="410" key="#com.intellij.fileTypes.FileTypeChooser/48.27.1318.741@48.27.1318.741" timestamp="1589622390350" />
   </component>
 </project>
