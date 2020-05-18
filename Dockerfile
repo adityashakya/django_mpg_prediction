@@ -3,13 +3,17 @@ FROM python:3.8
 
 
 # Layer for installing python dependencies
-RUN pip install pipenv
-COPY Pipfile* /
-RUN pipenv lock --requirements > requirements.txt
+#RUN pip install pipenv
+#COPY Pipfile* /
+#RUN pipenv lock --requirements > requirements.txt
+
+
+COPY requirements.txt /requirements.txt
 WORKDIR /
 RUN pip install -r requirements.txt
-#COPY requirements.txt /requirements.txt
 
+# Space for additional package installs during development
+RUN pip install pymongo
 #COPY Pipefile /Pipefile
 #COPY Pipefile.lock /Pipefile.lock
 

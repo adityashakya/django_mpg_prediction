@@ -1,71 +1,18 @@
-{% load static %}
-<html lang="en">
-<head>
+{% extends 'app/header.html' %}
 
-     <title>MPG prediction Usecase</title>
+{% block content%}
 
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="Tooplate">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
-     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" >
-     <link rel="stylesheet" href="{% static 'css/animate.css' %}" >
-     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" >
-     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" >
+    <h2>Check mileage of you Car Instantly</h2>
 
-     <!-- MAIN CSS -->
-
-</head>
-<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
-     <div class="container">
-     <!-- MENU -->
-     <header>
-     <section class="navbar navbar-default navbar-static-top" role="navigation" style="align-items: center;">
-          <div class="container">
-
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
-
-                    <!-- lOGO TEXT HERE -->
-                    <a href="app/index.html" class="navbar-brand"><i class="fa fa-h-square"></i>MPG Problem</a>
-               </div>
-
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                         <li><a href="/" class="smoothScroll">Home</a></li>
-                         <li><a href="viewDataBase/" class="smoothScroll">View DataBase</a></li>
-                    </ul>
-               </div>
-
-          </div>
-     </section>
-</header>
-</div>
-
-
-     <!-- HOME -->
-
-
-     <h3>
-         Check milage of your car instantly
-     </h3>
-
-
-
-     <h4>Enter your car details</h4>
-
-     <form method="post" enctype="multipart/form-data" action="mpg_predict">
-         {% csrf_token %}
-         <div class="col-md-4 col-sm-4"><label for="cylinderVal">Cylinders:</label> </div> <input type='text' id = 'cylinderVal' name="cylinderVal" type="text" value={{form_values.cylinders}}><br><br>
+    <h3>Please enter details:</h3>
+    <br>
+    {%  if prediction  %}
+    <form method="post" enctype="multipart/form-data" action="update_database">
+    {% else %}
+    <form method="post" enctype="multipart/form-data" action="mpg_predict">
+    {% endif%}
+ {% csrf_token %}
+<div class="col-md-4 col-sm-4"><label for="cylinderVal">Cylinders:</label> </div> <input type='text' id = 'cylinderVal' name="cylinderVal" type="text" value={{form_values.cylinders}}><br><br>
          <div class="col-md-4 col-sm-4"><label for="dispVal">Displacement:</label> </div> <input type="text" id="dispVal" name="dispVal" value={{form_values.displacement}}><br><br>
          <div class="col-md-4 col-sm-4"><label for="hrsPwrVal">horsepower:</label> </div> <input type="text" id="hrsPwrVal" name="hrsPwrVal" value={{form_values.horsepower}}><br><br>
          <div class="col-md-4 col-sm-4"><label for="weightVal">weight:</label> </div> <input type="text" id="weightVal" name="weightVal" value={{form_values.weight}}><br><br>
@@ -73,54 +20,21 @@
          <div class="col-md-4 col-sm-4"><label for="modelVal">model:</label> </div> <input type="text" id="modelVal" name="modelVal" value={{form_values.model_year}}><br><br>
          <div class="col-md-4 col-sm-4"><label for="originVal">origin:</label> </div> <input type="text" id="originVal" name="originVal" value={{form_values.origin}}><br><br>
 
-         <input type="submit" value="Submit">
 
-    </form>
-{% if prediction %}
-    <h3> Your car's Miles per Gallon (MPG) is: {{ prediction }} </h3>
-{% endif %}
-    
-</div>
 
-     <!-- FOOTER -->
-     <footer data-stellar-background-ratio="5">
-          <div class="container">
-               <div class="row">
+ {%  if prediction  %}
+ <h4>The mpg score is {{prediction}}</h4>
+ <h5>If the response is good. Do you weant to save it in DB?
+ </h5>
+ <input type="hidden" id="lname" name="mpgVal" value={{prediction}}>
+ <input type="submit" value="Add to DB" ></div>
+ {% else%}
+ <input type="submit" value="Submit" ></div>
+ {% endif %}
 
-                    
+</form></form>
 
-                    <div class="col-md-12 col-sm-12 border-top">
-                         <div class="col-md-4 col-sm-6">
-                              <div class="copyright-text"> 
-                                   <p>Copyright </p>
-                              </div>
-                         </div>
-                         <div class="col-md-6 col-sm-6">
-                              <div class="footer-link"> 
-                                   
-                                   <a href="#">Save</a>
-                              </div>
-                         </div>
-                         <div class="col-md-2 col-sm-2 text-align-center">
-                              <div class="angle-up-btn"> 
-                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
-                              </div>
-                         </div>   
-                    </div>
-                    
-               </div>
-          </div>
-     </footer>
 
-     <!-- SCRIPTS -->
-     <script  src="{% static 'js/jquery.js' %}"></script>
-     <script  src="{% static 'js/bootstrap.min.js' %}"></script>
-     <script  src="{% static 'js/jquery.sticky.js' %}"></script>
-     <script  src="{% static 'js/jquery.stellar.min.js' %}"></script>
-     <script  src="{% static 'js/wow.min.js' %}"></script>
-     <script  src="{% static 'js/smoothscroll.js' %}"></script>
-     <script  src="{% static 'js/owl.carousel.min.js' %}"></script>
-     <script  src="{% static 'js/custom.js' %}"></script>
 
-</body>
-</html>
+
+{% endblock %}

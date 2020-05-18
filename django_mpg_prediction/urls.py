@@ -22,5 +22,7 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('^$', views.index, name='homepage'),
+    url('viewDataBase', views.view_database, name='viewDataBase'),
+    url('update_database', views.update_database, name='updateDataBase'),
     url('mpg_predict', views.mpg_predict, name='mpg_predict')
 ]

@@ -7,6 +7,15 @@ import joblib
 import keras
 import numpy as np
 
+# DB imports
+import pymongo
+from pymongo import MongoClient
+
+# connect to db
+client = MongoClient('localhost', 27017)
+db = client['mpg_database']
+collection_table = db['mpg_table']
+
 
 # Load the model, the data pipeline and the target scaler
 loaded_model = keras.models.load_model('./ml_model/MPG_keras_NN')
@@ -60,6 +69,7 @@ def mpg_predict(request):
                               'model year': request.POST.get('modelVal'),
                               'origin': request.POST.get('originVal'),
                               'weight': request.POST.get('weightVal')}
+        model_input_values = input_values # update the values in the default dict
 
         model_input = get_input_set(input_values, loaded_pipeline)
         prediction = get_prediction(loaded_model, loaded_target_scaler, model_input)
@@ -68,3 +78,19 @@ def mpg_predict(request):
         context = {'prediction': prediction, 'form_values': input_values}
 
     return render(request, 'app/index.html', context=context)
+
+
+# Database routes
+def view_database(request):
+    row_count = collection_table.find().count()
+    context = {'row_count': row_count}
+    return render(request, 'app/viewDataBase.html', context=context)
+
+def update_database(request):
+    # get new dictionary object id, else mongodb consider it as duplicate dict.
+    model_input_values_copy = model_input_values.copy()
+    model_input_values_copy['mpg'] = request.POST.get('mpgVal')
+    collection_table.insert_one(model_input_values_copy)
+    row_count = collection_table.find().count()
+    context = {'row_count': row_count}
+    return render(request, 'app/viewDataBase.html', context=context)
