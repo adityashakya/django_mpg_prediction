@@ -12,7 +12,7 @@ import pymongo
 from pymongo import MongoClient
 
 # connect to db
-client = MongoClient('localhost', 27017)
+client = MongoClient('mongodb://database')
 db = client['mpg_database']
 collection_table = db['mpg_table']
 

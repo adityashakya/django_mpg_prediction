@@ -1,5 +1,12 @@
 version: '3'
 services:
+  database:
+    image: mongo:4.0.18
+    container_name: mongo_db_container
+    volumes:
+      - ./mongo_db:/data/db
+    ports:
+      - "27017:27017"
   app:
     build:
       context: ./
@@ -7,6 +14,10 @@ services:
     image: model_mpg
     ports:
       - "8000:8000"
+    links:
+      - database
     command:
       - "runserver"
       - "0.0.0.0:8000"
+
+
